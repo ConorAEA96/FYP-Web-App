@@ -300,8 +300,8 @@ class App extends Component {
                             <Switch>
                                 <Route path="/" exact component={Home} />
                                 <Route path="/predictions" component={Predictions} />
-                                <Route path="/results" component={Fixtures & Results} />
-                                <Route path="/standings" component={Table} />
+                                <Route path="/results" component={Results} />
+                                <Route path="/standings" component={Standings} />
                             </Switch>
                         </div>
                     </div>

@@ -13,7 +13,7 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://conor-prem-league-prediction.heroku.com/summary')
+        axios.get('https://conor-prem-league-prediction.herokuapp.com/summary')
             .then(response => {
                 console.log(response.data);
                 this.setState({ summary: response.data, is_loaded: true });

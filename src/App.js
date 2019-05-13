@@ -13,7 +13,7 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://conor.prem-league-predicton.herokuapp.com/summary')
+        axios.get('https://conor-prem-league-predicton.herokuapp.com/summary')
             .then(response => {
                 console.log(response.data);
                 this.setState({ summary: response.data, is_loaded: true });
@@ -57,7 +57,7 @@ class Standings extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://epl-server.herokuapp.com/rankings')
+        axios.get('https://conor-prem-league-prediction.herokuapp.com/rankings')
             .then(response => {
                 let res = response.data;
                 let matrix =[];
@@ -167,7 +167,7 @@ class Results extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://epl-server.herokuapp.com/previous_results')
+        axios.get('https://conor-prem-league-prediction.herokuapp.com/previous_results')
             .then(response => {
                 this.setState({ posts: response.data.reverse(), is_loaded: true });
             });
@@ -234,7 +234,7 @@ class Predictions extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://epl-server.herokuapp.com/predictions')
+        axios.get('https://conor-prem-league-prediction.herokuapp.com/predictions')
             .then(response => {
                 this.setState({ posts: response.data, is_loaded: true });
             });

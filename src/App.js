@@ -13,7 +13,7 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://serene-meadow-33873.herokuapp.com/')
+        axios.get('https://conor.prem-league-predicton.herokuapp.com/summary')
             .then(response => {
                 console.log(response.data);
                 this.setState({ summary: response.data, is_loaded: true });
@@ -36,6 +36,7 @@ class Home extends Component {
                 <p>If you would like to look at match predictions, <b><a href='/predictions'>Click Predictions</a></b>.</p>
                 <p>If you would like to look at previous matches of the current season, <b><a href='/results'>Click Results</a></b>.</p>
                 <p>If you would like to look at the current standing as well as predicted standings, <b><a href='/standings'>Click Standings</a></b>.</p>
+               
             </div>
         );
     }
@@ -56,7 +57,7 @@ class Standings extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://serene-meadow-33873.herokuapp.com/standings')
+        axios.get('https://epl-server.herokuapp.com/rankings')
             .then(response => {
                 let res = response.data;
                 let matrix =[];
@@ -118,7 +119,7 @@ class Standings extends Component {
     render() {
         return (
             <div>
-                <h2 className='content_header'>Table</h2>
+                <h2 className='content_header'>Standings</h2>
                 <div>
                     <Chart
                         chartType="LineChart"
@@ -166,7 +167,7 @@ class Results extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://serene-meadow-33873.herokuapp.com/results')
+        axios.get('https://epl-server.herokuapp.com/previous_results')
             .then(response => {
                 this.setState({ posts: response.data.reverse(), is_loaded: true });
             });
@@ -175,7 +176,7 @@ class Results extends Component {
     render() {
         return (
             <div>
-                <h2 className='content_header'>Fixtures & Results</h2>
+                <h2 className='content_header'>Results</h2>
                 {this.state.posts.map((post, key) =>
                     <PreviousMatch key={key} post={post}></PreviousMatch>
                 )}
@@ -233,7 +234,7 @@ class Predictions extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://serene-meadow-33873.herokuapp.com/predictions')
+        axios.get('https://epl-server.herokuapp.com/predictions')
             .then(response => {
                 this.setState({ posts: response.data, is_loaded: true });
             });
@@ -279,7 +280,7 @@ class App extends Component {
                     <div>
                         <div className='header'>
                             <img className='header_logo' src={logo} alt='logo'></img>
-                            <h1>Football Predictor</h1>
+                            <h1>English Premier League Predictor</h1>
                         </div>
                         <div className="navigator">
                             <Link to="/">

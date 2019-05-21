@@ -23,20 +23,12 @@ class Home extends Component {
     render() {
         return (
             <div className='home'>
-                <h2 className='content_header'>Summary</h2>
-                {this.state.is_loaded && 
-                    <div>
-                        <p>Most likely to win the season: <b>{this.state.summary.winner}</b></p>
-                        <p>Prediction Accuracy: <b>{Math.round(this.state.summary.accuracy * 10000) / 100}%</b></p>
- 
-                    </div>
-                }
                 <br/>
                 <h2 className='content_header'>Help</h2>
-                <p>If you would like to look at match predictions, <b><a href='/predictions'>Click Predictions</a></b>.</p>
-                <p>If you would like to look at previous matches of the current season, <b><a href='/results'>Click Results</a></b>.</p>
+                <p>For head-to-head match predictions, <b><a href='/predictions'>Click Predictions</a></b>.</p>
+                <p>For the previous matches this current season, <b><a href='/results'>Click Results</a></b>.</p>
                 <p>If you would like to look at the current standing as well as predicted standings, <b><a href='/standings'>Click Standings</a></b>.</p>
-                <p>Here is my link to Github, <b><a href='https://github.com/ConorAEA96'>Github</a></b>.</p>
+                <p>Here is a link to my Github, <b><a href='https://github.com/ConorAEA96'>Github</a></b>.</p>
             </div>
         );
     }

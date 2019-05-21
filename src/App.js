@@ -272,7 +272,7 @@ class App extends Component {
                     <div>
                         <div className='header'>
                             <img className='header_logo' src={logo} alt='logo'></img>
-                            <h1>English Premier League Predictor</h1>
+                            <h1>Final Year Project - English Premier League Predictor</h1>
                         </div>
                         <div className="navigator">
                             <Link to="/">

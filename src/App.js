@@ -29,6 +29,7 @@ class Home extends Component {
                 <p>For the previous matches this current season, <b><a href='/results'>Click Results</a></b>.</p>
                 <p>If you would like to look at the current standing as well as predicted standings, <b><a href='/standings'>Click Standings</a></b>.</p>
                 <p>Here is a link to my Github, <b><a href='https://github.com/ConorAEA96'>Github</a></b>.</p>
+                <p>Here is a link to my LinkedIn, <b><a href='https://www.linkedin.com/in/conor-andrew-52a310159/'>LinkedIn</a></b>.</p>
             </div>
         );
     }

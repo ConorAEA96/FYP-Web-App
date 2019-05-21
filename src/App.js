@@ -24,7 +24,7 @@ class Home extends Component {
         return (
             <div className='home'>
                 <br/>
-                <h2 className='content_header'>Help</h2>
+                <h2 className='content_header'>Home</h2>
                 <p>For head-to-head match predictions, <b><a href='/predictions'>Click Predictions</a></b>.</p>
                 <p>For the previous matches this current season, <b><a href='/results'>Click Results</a></b>.</p>
                 <p>If you would like to look at the current standing as well as predicted standings, <b><a href='/standings'>Click Standings</a></b>.</p>

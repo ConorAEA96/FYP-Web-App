@@ -226,7 +226,7 @@ class Predictions extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://epl-server.herokuapp.com/predictions')
+        axios.get('https://conor-prem-league-predictor.herokuapp.com/predictions')
             .then(response => {
                 this.setState({ posts: response.data, is_loaded: true });
             });

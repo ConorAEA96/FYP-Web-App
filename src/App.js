@@ -36,7 +36,7 @@ class Home extends Component {
                 <p>If you would like to look at match predictions, <b><a href='/predictions'>Click Predictions</a></b>.</p>
                 <p>If you would like to look at previous matches of the current season, <b><a href='/results'>Click Results</a></b>.</p>
                 <p>If you would like to look at the current standing as well as predicted standings, <b><a href='/standings'>Click Standings</a></b>.</p>
-               
+                <p>Here is my link to Github, <b><a href='https://github.com/ConorAEA96'>Github</a></b>.</p>
             </div>
         );
     }
